@@ -5,21 +5,22 @@
 // @import "./system/utils";
 @import "./system/mixins";
 
-// Mixi
+// Mixins
 
 // Base
 @import "./base/base";
 @import "./base/icons";
+@import "./base/typography";
 // @import "./base/buttons";
 // @import "./base/headers";
 // @import "./base/links";
 
 // Blocks
 // @import "./blocks/footer";
-// @import "./blocks/header";
+@import "./blocks/header";
+@import "./blocks/nav-link";
 // @import "./blocks/logo";
 // @import "./blocks/menu";
-// @import "./blocks/nav-icon";
 // @import "./blocks/scrollup";
 
 // Cards
@@ -46,21 +47,3 @@
 // @import "./sections/portfolio";
 // @import "./sections/about";
 // @import "./sections/docs";
-
-.header {
-    position: sticky;
-    top: 0;
-    margin-top: 96px;
-    margin-bottom: 96px;
-    width: 50%;
-    flex-shrink: 0;
-    max-height: 100vh;
-}
-
-.content {
-    margin-top: 96px;
-    margin-bottom: 96px;
-    width: 50%;
-    flex-shrink: 0;
-
-}

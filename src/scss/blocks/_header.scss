@@ -1,0 +1,30 @@
+.header {
+    position: sticky;
+    top: 0;
+    margin-top: 96px;
+    margin-bottom: 96px;
+    width: 50%;
+    flex-shrink: 0;
+    max-height: 100vh;
+
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.header__info {
+    line-height: 1.5;
+    max-width: 20rem;
+    margin-top: 1rem;
+}
+
+.header__nav {
+    margin-top: 4rem;
+}
+
+.header__links {
+    display: flex;
+    column-gap: 1.25rem;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: .25rem;
+}

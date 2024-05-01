@@ -6,4 +6,14 @@
         width: 8px;
         height: 12px;
     }
+
+    &--github,
+    &--linkedin,
+    &--codepen,
+    &--instagram,
+    &--twitter,
+    &--goodreads {
+        width: 24px;
+        height: 24px;
+    }
 }
