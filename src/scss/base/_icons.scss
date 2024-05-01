@@ -1,0 +1,9 @@
+.icon {
+    display: block;
+    flex-shrink: 0;
+
+    &--arrow-next {
+        width: 8px;
+        height: 12px;
+    }
+}
