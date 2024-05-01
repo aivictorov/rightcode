@@ -1,0 +1,21 @@
+.scrollup {
+    width: 70px;
+    height: 70px;
+    background: #FFD88B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 5;
+    right: 35px;
+    bottom: 110px;
+    transition: 0.5s;
+    opacity: 0;
+
+    @include bp(768px) {
+        width: 35px;
+        height: 35px;
+        right: 15px;
+    }
+}

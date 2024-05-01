@@ -1,0 +1,26 @@
+.link {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.2;
+    cursor: pointer;
+
+    @include bp(768px) {
+        font-size: 12px;
+    }
+
+    &--icon {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+    }
+
+    &--arrow {
+        font-weight: 700;
+        color: $red;
+
+        .link__icon {
+            margin-left: 13px;
+        }
+    }
+}

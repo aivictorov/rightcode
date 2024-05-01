@@ -1,0 +1,66 @@
+// System
+@import "./system/reset";
+// @import "./system/fonts";
+// @import "./system/vars";
+// @import "./system/utils";
+@import "./system/mixins";
+
+// Mixi
+
+// Base
+@import "./base/base";
+// @import "./base/buttons";
+// @import "./base/headers";
+// @import "./base/icons";
+// @import "./base/links";
+
+// Blocks
+// @import "./blocks/footer";
+// @import "./blocks/header";
+// @import "./blocks/logo";
+// @import "./blocks/menu";
+// @import "./blocks/nav-icon";
+// @import "./blocks/scrollup";
+
+// Cards
+// @import "./cards/service-card";
+// @import "./cards/article-card";
+// @import "./cards/portfolio-card";
+// @import "./cards/about-card";
+// @import "./cards/doc-card";
+
+// Forms
+// @import "./forms/form";
+// @import "./forms/input";
+// @import "./forms/select";
+// @import "./forms/checkbox";
+// @import "./forms/oversize-form";
+
+// Modals
+// @import "./modals/modals";
+
+// Sections
+// @import "./sections/slider";
+// @import "./sections/services";
+// @import "./sections/articles";
+// @import "./sections/portfolio";
+// @import "./sections/about";
+// @import "./sections/docs";
+
+.header {
+    position: sticky;
+    top: 0;
+    margin-top: 96px;
+    margin-bottom: 96px;
+    width: 50%;
+    flex-shrink: 0;
+    max-height: 100vh;
+}
+
+.content {
+    margin-top: 96px;
+    margin-bottom: 96px;
+    width: 50%;
+    flex-shrink: 0;
+
+}

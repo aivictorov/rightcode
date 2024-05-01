@@ -1,0 +1,26 @@
+<ul class="menu">
+    {% set menu = [
+        {
+            name: "О компании",
+            link: "/#about"
+        }, {
+            name: "Услуги",
+            link: "/#services"
+        }, {
+            name: "Портфолио",
+            link: "/#portfolio"
+        }, {
+            name: "Документы",
+            link: "/#docs"
+        }
+    ] %}
+
+    {% for item in menu %}
+        <li class="menu__item">
+            <a href={{ item.link }} class="menu__link">{{ item.name }}</a>
+        </li>
+    {% endfor %}
+    <li class="menu__item menu__item--btn">
+        <button class="btn btn--yellow" type="button" modal-button="oversize">Расчет негабаритности</button>
+    </li>
+</ul>
