@@ -30,6 +30,8 @@
     </head>
 
     <body>
+        {% include './blocks/languages.html' %}
+
         <div class="container">
             {% include './blocks/header.html' %}
 
@@ -37,14 +39,13 @@
                 {% include './sections/about.html' %}
                 {% include './sections/experience.html' %}
                 {% include './sections/projects.html' %}
-                {% include './sections/writing.html' %}
                 {% include './blocks/footer.html' %}
             </main>
         </div>
     </div>
 
     <!-- Scripts -->
-    {# <script type='module' src="./js/index.js"></script> #}
+    <script type='module' src="./js/index.js"></script>
     {# <script src="./js/index.bundle.js"></script> #}
 </body>
 

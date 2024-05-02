@@ -1,0 +1,10 @@
+a.link {
+    color: rgb(226 232 240);
+    font-weight: 500;
+
+    &:hover {
+        color: rgb(94 234 212);
+
+        cursor: url(./../img/fi.svg), pointer;
+    }
+}

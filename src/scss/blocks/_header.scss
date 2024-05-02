@@ -1,14 +1,22 @@
 .header {
+    height: 100vh;
+    // box-sizing: border-box;
     position: sticky;
     top: 0;
-    margin-top: 96px;
-    margin-bottom: 96px;
+
+    padding-top: 96px;
+    padding-bottom: 96px;
+
     width: 50%;
     flex-shrink: 0;
-    max-height: 100vh;
+
 
     justify-content: space-between;
     flex-direction: column;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .header__info {
@@ -19,12 +27,4 @@
 
 .header__nav {
     margin-top: 4rem;
-}
-
-.header__links {
-    display: flex;
-    column-gap: 1.25rem;
-    align-items: center;
-    margin-top: 2rem;
-    margin-left: .25rem;
 }

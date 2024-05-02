@@ -1,0 +1,28 @@
+.h1 {
+    font-size: 48px;
+    line-height: 1;
+    color: rgb(226 232 240);
+    letter-spacing: -.025em;
+    font-weight: 700;
+}
+
+.h2 {
+    color: rgb(226 232 240);
+    letter-spacing: -.025em;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-top: .75rem;
+}
+
+p+p {
+    margin-top: 1rem;
+}
+
+// MOVE!!!!
+.content {
+    margin-top: 96px;
+    margin-bottom: 96px;
+    width: 50%;
+    flex-shrink: 0;
+}

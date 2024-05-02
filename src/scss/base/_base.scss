@@ -39,6 +39,11 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 
+
+	// background-image: radial-gradient(600px at 0px 0px, rgba(29, 78, 216, 0.5), transparent 80%);
+
+
+
 	@include bp(768px) {
 		font-size: 12px;
 	}
@@ -64,17 +69,19 @@ body>* {
 	display: flex;
 	justify-content: space-between;
 
-
 	max-width: 1280px;
 	width: 100%;
-	// margin: 0 auto;
+	margin: 0 auto;
 	padding: 0 96px;
-	// position: relative;
 
+	// position: relative;
 	// @include bp(960px) {
 	// max-width: 768px;
 	// padding: 0 20px;
 	// }
+	// radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+	// background: radial-gradient(600px at 1260px 2396px, rgba(29, 78, 216, 0.15), transparent 80%);
+
 }
 
 .img {

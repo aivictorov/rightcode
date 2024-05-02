@@ -1,54 +1,17 @@
-<section id="projects" class="projects">
-    <div class="">
+<section class="projects" id="projects">
+    {# <div class="">
         <h2 class="h2">Projects</h2>
-    </div>
-
+    </div> #}
     <div>
-        <ul>
-            <li class="mb-12">
-                <div class="">
-                    <div class=""></div>
-                    <div>
-                        <h3>
-                            <a class="" href="#!" target="_blank">
-                                <span>
-                                    Spotify Profile
-                                </span>
-                                <svg class="icon icon--arrow-up-right">
-                                    <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
-                                </svg>
-                            </a>
-                        </h3>
-                        <p>
-                            Web app for visualizing personalized Spotify data. View
-                            your top artists, top tracks, recently played tracks, and detailed audio information about
-                            each track. Create and save new playlists of recommended tracks based on your existing
-                            playlists and more.
-                        </p>
-                        <ul>
-                            {% set items = ["React", "Express", "Spotify API", "Heroku", "Heroku"] %}
-
-                            {% for item in items %}
-                                <li>
-                                    {% include './../elements/badge.html' %}
-                                </li>
-                            {% endfor %}
-                        </ul>
-                    </div>
-                    <img width="200" height="48" src="./img/project.webp"/>
-                </div>
+        <ul class="projects-list">
+            <li>
+                {% include './../cards/project-card.html' %}
+            </li>
+            <li>
+                {% include './../cards/project-card.html' %}
             </li>
         </ul>
 
-        <div class="">
-            <a href="#!">
-                <span>
-                    View Full Project Archive
-                </span>
-                <svg class="icon icon--arrow-right">
-                    <use xlink:href="./img/icons/sprite.svg#arrow-right"></use>
-                </svg>
-            </a>
-        </div>
+        {% include './../blocks/details.html' %}
     </div>
 </section>

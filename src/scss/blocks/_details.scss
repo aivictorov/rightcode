@@ -1,0 +1,17 @@
+.projects__details {
+    margin-top: 3rem;
+}
+
+.projects__details-link {
+    display: flex;
+}
+
+.projects__details-link-text {
+    padding-bottom: 1px;
+    // border-color: transparent;
+    border-bottom-width: 1px;
+    border: 0 solid #e5e7eb;
+    color: rgb(226 232 240);
+    line-height: 1.25;
+    font-weight: 600;
+}

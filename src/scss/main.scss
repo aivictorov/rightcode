@@ -1,51 +1,37 @@
-// System
-@import "./system/reset";
-// @import "./system/fonts";
-// @import "./system/vars";
-// @import "./system/utils";
-@import "./system/mixins";
-
-// Mixins
-
 // Base
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/vars";
+@import "./base/mixins";
 @import "./base/base";
-@import "./base/icons";
-@import "./base/typography";
-// @import "./base/buttons";
-// @import "./base/headers";
-// @import "./base/links";
+// @import "./base/utils";
+
+// Elements
+@import "./elements/badge";
+@import "./elements/icons";
+@import "./elements/typography";
+@import "./elements/links";
+// @import "./elements/buttons";
+// @import "./elements/headers";
 
 // Blocks
-// @import "./blocks/footer";
+@import "./blocks/footer";
 @import "./blocks/header";
-@import "./blocks/nav-link";
-// @import "./blocks/logo";
-// @import "./blocks/menu";
+@import "./blocks/languages";
+@import "./blocks/details";
+@import "./blocks/nav";
+@import "./blocks/contacts";
 // @import "./blocks/scrollup";
 
 // Cards
-// @import "./cards/service-card";
-// @import "./cards/article-card";
-// @import "./cards/portfolio-card";
-// @import "./cards/about-card";
-// @import "./cards/doc-card";
-
-// Forms
-// @import "./forms/form";
-// @import "./forms/input";
-// @import "./forms/select";
-// @import "./forms/checkbox";
-// @import "./forms/oversize-form";
-
-// Modals
-// @import "./modals/modals";
+@import "./cards/experience-card";
+@import "./cards/project-card";
 
 // Sections
 @import "./sections/about";
 @import "./sections/experience";
 @import "./sections/projects";
-// @import "./sections/slider";
-// @import "./sections/services";
-// @import "./sections/articles";
-// @import "./sections/portfolio";
-// @import "./sections/docs";
+
+// Mixins
+// Modals
+// Forms

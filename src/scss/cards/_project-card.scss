@@ -1,0 +1,37 @@
+.projects__card {
+    display: flex;
+    column-gap: 1rem;
+    align-items: start;
+}
+
+.projects__card-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid rgba(226, 232, 240, .1);
+    border-radius: .25rem;
+    display: block;
+
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.projects__card-content {}
+
+.projects__card-header {
+    line-height: 1.25;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    align-items: baseline;
+    display: inline-flex;
+}
+
+.projects__card-text {
+    line-height: 1.5;
+    font-size: .875rem;
+    // line-height: 1.25rem;
+    margin-top: .5rem;
+}

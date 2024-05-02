@@ -1,0 +1,32 @@
+<div class="projects__card">
+    <div class="projects__card-image">
+        <img src="./img/project.webp"/>
+    </div>
+    <div class="projects__card-content">
+        <a class="projects__card-header link" href="#!" target="_blank">
+            <h3>Spotify Profile</h3>
+            <svg class="icon icon--arrow-up-right">
+                <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
+            </svg>
+        </a>
+        <div class="projects__card-text">
+            <p>
+                Web app for visualizing personalized Spotify data. View
+                your top artists, top tracks, recently played tracks, and detailed audio information
+                about
+                each track. Create and save new playlists of recommended tracks based on your existing
+                playlists and more.
+            </p>
+        </div>
+
+        <ul class="badges-list">
+            {% set items = ["React", "JavaScript", "PHP", "Laravel", "SCSS"] %}
+
+            {% for item in items %}
+                <li>
+                    {% include './../elements/badge.html' %}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

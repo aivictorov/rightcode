@@ -1,32 +1,13 @@
-import { oversizeForm } from './oversize.js';
-import { validate, validateEmail, validateCaptcha } from './validation.js';
-
 window.addEventListener('DOMContentLoaded', () => {
-	modalWindows();
-	scrollup();
-	oversizeForm();
-	callbackForm();
-	inputFile();
-	mobileNav();
+	// modalWindows();
+	// scrollup();
+	// oversizeForm();
+	// callbackForm();
+	// inputFile();
+	// mobileNav();
+	cursor();
+	nav();
 });
-
-function mobileNav() {
-	const nav = document.querySelector('.menu');
-	const navIcon = document.querySelector('.nav-icon');
-	const navLinks = document.querySelectorAll('.menu .menu__item a');
-
-	navIcon.addEventListener('click', function () {
-		navIcon.classList.toggle('nav-icon--active');
-		nav.classList.toggle('menu--active');
-	});
-
-	navLinks.forEach((navLink) => {
-		navLink.addEventListener('click', function () {
-			navIcon.classList.remove('nav-icon--active');
-			nav.classList.remove('menu--active');
-		});
-	});
-};
 
 function scrollup() {
 	const scrollup = document.querySelector('.scrollup');
@@ -39,130 +20,54 @@ function scrollup() {
 	});
 };
 
-function modalWindows() {
-	document.querySelectorAll('[modal-button]').forEach((button) => {
-		const modal = document.querySelector(`div[modal-window="${button.getAttribute('modal-button')}"]`);
-
-		if (modal) {
-			const content = modal.querySelector('.modal__content');
-			const closeBtn = modal.querySelector(`[close-modal-button="${button.getAttribute('modal-button')}"]`);
-			const nav = document.querySelector('.menu');
-			const navIcon = document.querySelector('.nav-icon');
-			const header = document.querySelector('.header');
-
-
-			button.addEventListener('click', () => {
-				document.querySelectorAll('[modal-window]').forEach((window) => {
-					window.classList.remove('active');
-				});
-				navIcon.classList.remove('nav-icon--active');
-				nav.classList.remove('menu--active');
-				modal.classList.add('active');
-				document.body.classList.add('noscroll');
-				header.classList.add('noscroll');
-				modal.scrollTo(0, 0);
-			});
-
-			content.addEventListener('mousedown', (event) => {
-				event.stopPropagation();
-			});
-
-			modal.addEventListener('mousedown', () => {
-				modal.classList.remove('active');
-				document.body.classList.remove('noscroll');
-				header.classList.remove('noscroll');
-			});
-
-			if (closeBtn) {
-				closeBtn.addEventListener('click', () => {
-					modal.classList.remove('active');
-					document.body.classList.remove('noscroll');
-					header.classList.remove('noscroll');
-				});
-			};
-		};
+function cursor() {
+	document.addEventListener('mousemove', (event) => {
+		document.body.style = `background-image: radial-gradient(600px at ${event.clientX}px ${event.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%);`;
 	});
+}
 
-	alignModalWindows();
+function nav() {
+	document.addEventListener('scroll', (event) => {
 
-	window.addEventListener('resize', alignModalWindows);
+		const scrollPosition = window.scrollY;
+		// console.log('scrollPosition', scrollPosition)
 
-	function alignModalWindows() {
-		document.querySelectorAll('div[modal-window]').forEach((modal) => {
-			const content = modal.querySelector('.modal__content');
-			if (content.clientHeight >= window.innerHeight - 100) {
-				content.classList.remove('modal__content--center');
-			} else {
-				content.classList.add('modal__content--center');
-			};
-		});
-	};
-};
+		var about = document.getElementById('about');
+		// var yPosition = about.offsetTop;
+		// console.log('about', about.offsetTop, about.clientHeight)
 
-function callbackForm() {
-	const form = document.querySelector('#form')
-	const answer = document.querySelector('#answer')
+		var experience = document.getElementById('experience');
+		// var yPosition = experience.offsetTop;
+		// console.log('experience', experience.offsetTop, experience.clientHeight)
 
-	form.addEventListener('submit', (event) => {
-		event.preventDefault();
+		var projects = document.getElementById('projects');
+		// var yPosition = projects.offsetTop;
+		// console.log('projects', projects.offsetTop, projects.clientHeight)
 
-		validate(form, 'name');
-		validate(form, 'phone');
-		validateEmail(form, 'email');
-		validateCaptcha(form);
+		// for (let i = 0; i < navLinks.length; i++) {
+		// 	navLinks[i].addEventListener('click', scrollToTarget);
+		// }
+		// console.log(scrollPosition, projects.offsetTop,)
 
-		if (
-			validate(form, 'name') &&
-			validate(form, 'phone') &&
-			validateEmail(form, 'email') &&
-			validateCaptcha(form)
-		) {
-			const formData = new FormData(form);
+		if (scrollPosition > about.offsetTop - 250 && scrollPosition < about.offsetTop + about.clientHeight - 250) {
+			document.querySelectorAll('.nav-link')[0].classList.add('nav-link--active');
+		} else {
+			document.querySelectorAll('.nav-link')[0].classList.remove('nav-link--active');
+		}
 
-			fetch('./../php/mail.php', {
-				method: 'POST',
-				body: formData
-			}).then(response => {
-				response.text().then(responseText => {
-					form.classList.add('none')
-					answer.innerText = responseText;
-					const closeBtn = event.target.closest('[modal-window]').querySelector('[close-modal-button]');
+		if (scrollPosition > experience.offsetTop - 250 && scrollPosition < experience.offsetTop + experience.clientHeight - 250) {
+			document.querySelectorAll('.nav-link')[1].classList.add('nav-link--active');
+		} else {
+			document.querySelectorAll('.nav-link')[1].classList.remove('nav-link--active');
+		}
 
-					if (closeBtn) {
-						closeBtn.classList.remove('none');
+		if (scrollPosition > projects.offsetTop - 250 && scrollPosition < projects.offsetTop + projects.clientHeight - 250) {
+			document.querySelectorAll('.nav-link')[2].classList.add('nav-link--active');
+		} else {
+			document.querySelectorAll('.nav-link')[2].classList.remove('nav-link--active');
+		}
 
-						closeBtn.addEventListener('click', function (event) {
-							form.classList.remove('none');
-							answer.innerText = "";
-							grecaptcha.reset();
-							closeBtn.classList.add('none');
-						});
-					};
-				});
-			});
-		};
-	});
-};
 
-function inputFile() {
-	document.querySelectorAll('input[type="file"]').forEach((input) => {
-		const label = input.closest('label')
-		const info = label.querySelector('.input-file__info');
 
-		input.addEventListener('change', function () {
-			if (input.files.length > 0) {
-				info.innerText = `Прикреплено файлов: ${input.files.length}`;
-			} else {
-				info.innerText = "Прикрепить файл";
-			};
-		});
-
-		input.addEventListener('change', function () {
-			if (input.files.length > 3) {
-				input.value = "";
-				alert('Ошибка! Нельзя прикреплять больше 3 файлов');
-				info.innerText = "Прикрепить файл";
-			};
-		});
 	});
 };
