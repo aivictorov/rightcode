@@ -19,14 +19,9 @@
             </p>
         </div>
 
-        <ul class="badges-list">
-            {% set items = ["React", "JavaScript", "PHP", "Laravel", "SCSS"] %}
+        {% include './../blocks/badges-list.html' %}
 
-            {% for item in items %}
-                <li>
-                    {% include './../elements/badge.html' %}
-                </li>
-            {% endfor %}
-        </ul>
     </div>
+
+    <div class="card-overlay"></div>
 </div>
