@@ -15,15 +15,22 @@
     margin-top: .75rem;
 }
 
-*+p {
-    margin-top: 1rem;
+a.link {
+    color: rgb(226 232 240);
+    font-weight: 500;
+
+    &:hover {
+        color: rgb(94 234 212);
+    }
 }
 
+p+p {
+    margin-top: 1rem;
+}
 
 .content {
     margin-top: 96px;
     margin-bottom: 96px;
     width: 50%;
     flex-shrink: 0;
-
 }
