@@ -3,6 +3,11 @@
     display: flex;
     column-gap: 1.25rem;
     align-items: center;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     margin-left: .25rem;
+
+
+    @include bp(1024px) {
+        margin-top: 2rem;
+    }
 }

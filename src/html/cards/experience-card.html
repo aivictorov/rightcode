@@ -10,7 +10,7 @@
         <div class="experience-card__title link" href="https://www.klaviyo.com" target="_blank">
             <h3>
                 <a href="#!">
-                    <span>Senior Frontend Engineer</span>
+                    <span>{{ card.title }}</span>
                     <div class="card-overlay2"></div>
                 </a>
                 <!-- Senior Frontend Engineer -->
@@ -21,13 +21,15 @@
         </div>
 
         <p>
-            Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work
-            closely with cross-functional teams, including developers, designers, and product managers, to implement and
-            advocate for best practices in web accessibility.
+            {{ card.text }}
         </p>
 
-        {% include './../blocks/badges-list.html' %}
+        <ul class="badges-list">
+            {% for badge in card.badges %}
+                <li>
+                    {% include './../elements/badge.html' %}
+                </li>
+            {% endfor %}
+        </ul>
     </div>
-
-
 </div>

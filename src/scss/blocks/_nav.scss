@@ -1,3 +1,9 @@
+.header__nav {
+    @include bp(1024px) {
+        display: none;
+    }
+}
+
 .nav-link {
     padding-top: .75rem;
     padding-bottom: .75rem;

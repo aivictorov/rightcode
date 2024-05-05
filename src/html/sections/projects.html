@@ -1,15 +1,30 @@
 <section class="projects" id="projects">
-    {# <div class="">
-        <h2 class="h2">Projects</h2>
-    </div> #}
+
+    <div class="experience__title">
+        <h3 class="h3">Projects</h3>
+    </div>
+
+    {% set cards = [
+        {
+            'title': 'Frontend сайта туристического агентства',
+            'text': 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+            'image': './img/project.webp',
+            'badges': ["React", "JavaScript", "PHP"]
+        }, {
+            'title': 'Верстка сайта автосалона',
+            'text': 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
+            'image': './img/project_1.webp',
+            'badges': ["HTML", "SCSS", "Pixel Perfect", "Mobile (Desktop First)", "Gulp"]
+        }
+    ] %}
+
     <div>
         <ul class="projects-list">
-            <li>
-                {% include './../cards/project-card.html' %}
-            </li>
-            <li>
-                {% include './../cards/project-card.html' %}
-            </li>
+            {% for card in cards %}
+                <li>
+                    {% include './../cards/project-card.html' %}
+                </li>
+            {% endfor %}
         </ul>
 
         {% include './../blocks/details.html' %}

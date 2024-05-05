@@ -8,15 +8,26 @@
     padding-bottom: 96px;
 
     width: 50%;
-    flex-shrink: 0;
-
-
-    justify-content: space-between;
-    flex-direction: column;
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    // justify-content: space-between;
+    flex-shrink: 0;
+
+
+    @include bp(1024px) {
+        position: static;
+        width: 100%;
+        height: unset;
+        padding-bottom: 0;
+    }
+
+    @include bp(768px) {
+        padding-top: 3rem;
+        // padding-bottom: 3rem;
+        // padding-left: 1.5rem;
+        // padding-right: 1.5rem;
+    }
 }
 
 .header__info {

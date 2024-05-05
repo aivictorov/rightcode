@@ -1,11 +1,23 @@
 <section class="experience" id="experience">
+
+    <div class="experience__title">
+        <h3 class="h3">Experience</h3>
+    </div>
+
+    {% set cards = [
+        {
+            'title': 'Senior Frontend Engineer',
+            'text': 'Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.',
+            'badges': ["React", "JavaScript", "PHP"]
+        }
+    ] %}
+
     <ul class="experience-list">
-        <li>
-            {% include './../cards/experience-card.html' %}
-        </li>
-        <li>
-            {% include './../cards/experience-card.html' %}
-        </li>
+        {% for card in cards %}
+            <li>
+                {% include './../cards/experience-card.html' %}
+            </li>
+        {% endfor %}
     </ul>
 
     {% include './../blocks/details.html' %}

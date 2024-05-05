@@ -3,6 +3,27 @@
     scroll-margin-top: 6rem;
 }
 
+.experience__title {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    margin-bottom: 1rem;
+
+    @include bp(1024px) {
+        position: sticky;
+        top: 0;
+
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+
+        z-index: 20;
+
+        padding-left: 3rem;
+        padding-right: 3rem;
+        margin-left: -3rem;
+        margin-right: -3rem;
+    }
+}
+
 .experience-list>li {
     margin-bottom: 3rem;
 }

@@ -2,4 +2,14 @@
     margin-bottom: 9rem;
     scroll-margin-top: 6rem;
 
+    flex-shrink: 0;
+
+
+    @include bp(1024px) {
+        margin-bottom: 6rem;
+    }
+
+    @include bp(768px) {
+        margin-bottom: 4rem;
+    }
 }
