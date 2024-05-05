@@ -2,6 +2,7 @@
     <div class="projects__card-image">
         <img src="{{ card.image }}"/>
     </div>
+
     <div class="projects__card-content">
         <a class="projects__card-header link" href="#!" target="_blank">
             <h3>{{ card.title }}</h3>
@@ -14,6 +15,13 @@
                 {{ card.text }}
             </p>
         </div>
+
+        <a href="#!" class="projects__card-git-link" target="_blank">
+            <svg class="icon icon--gitFull">
+                <use xlink:href="./img/icons/sprite.svg#gitFull"></use>
+            </svg>
+            {# <span>Репозиторий на GitHub</span> #}
+        </a>
 
         <ul class="badges-list">
             {% for badge in card.badges %}

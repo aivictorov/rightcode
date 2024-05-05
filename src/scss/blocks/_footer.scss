@@ -5,6 +5,17 @@
     max-width: 28rem;
 
     & a.link {
-        color: rgb(148 163 184)
+        color: rgb(148 163 184);
+        font-weight: 500;
+
+
+        &:hover {
+            color: rgb(94 234 212);
+        }
+    }
+
+    & strong {
+        color: rgb(148 163 184);
+        font-weight: 500;
     }
 }

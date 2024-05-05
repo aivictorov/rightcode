@@ -22,7 +22,7 @@ function scrollup() {
 
 function cursor() {
 	document.addEventListener('mousemove', (event) => {
-		document.body.style = `background-image: radial-gradient(600px at ${event.clientX}px ${event.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%);`;
+		document.body.style = `background-image: radial-gradient(600px at ${event.pageX}px ${event.pageY}px, rgba(29, 78, 216, 0.2), transparent 80%);`;
 	});
 }
 
@@ -36,13 +36,13 @@ function nav() {
 		// var yPosition = about.offsetTop;
 		// console.log('about', about.offsetTop, about.clientHeight)
 
-		var experience = document.getElementById('experience');
-		// var yPosition = experience.offsetTop;
-		// console.log('experience', experience.offsetTop, experience.clientHeight)
-
 		var projects = document.getElementById('projects');
 		// var yPosition = projects.offsetTop;
 		// console.log('projects', projects.offsetTop, projects.clientHeight)
+
+		var experience = document.getElementById('experience');
+		// var yPosition = experience.offsetTop;
+		// console.log('experience', experience.offsetTop, experience.clientHeight)
 
 		// for (let i = 0; i < navLinks.length; i++) {
 		// 	navLinks[i].addEventListener('click', scrollToTarget);
@@ -55,19 +55,16 @@ function nav() {
 			document.querySelectorAll('.nav-link')[0].classList.remove('nav-link--active');
 		}
 
-		if (scrollPosition > experience.offsetTop - 250 && scrollPosition < experience.offsetTop + experience.clientHeight - 250) {
+		if (scrollPosition > projects.offsetTop - 250 && scrollPosition < projects.offsetTop + projects.clientHeight - 250) {
 			document.querySelectorAll('.nav-link')[1].classList.add('nav-link--active');
 		} else {
 			document.querySelectorAll('.nav-link')[1].classList.remove('nav-link--active');
 		}
 
-		if (scrollPosition > projects.offsetTop - 250 && scrollPosition < projects.offsetTop + projects.clientHeight - 250) {
+		if (scrollPosition > experience.offsetTop - 250 && scrollPosition < experience.offsetTop + experience.clientHeight - 250) {
 			document.querySelectorAll('.nav-link')[2].classList.add('nav-link--active');
 		} else {
 			document.querySelectorAll('.nav-link')[2].classList.remove('nav-link--active');
 		}
-
-
-
 	});
 };

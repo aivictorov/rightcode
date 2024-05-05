@@ -4,14 +4,27 @@
 
 .projects__details-link {
     display: flex;
+    column-gap: 0.25rem;
+
+    &:hover {
+        .projects__details-link-text {
+            border-bottom: 1px solid rgb(94 234 212);
+        }
+
+        svg {
+            transform: translateX(0.5rem);
+        }
+    }
 }
 
 .projects__details-link-text {
     padding-bottom: 1px;
     // border-color: transparent;
     border-bottom-width: 1px;
-    border: 0 solid #e5e7eb;
+    border: 1px solid transparent;
     color: rgb(226 232 240);
     line-height: 1.25;
     font-weight: 600;
+
+    transition: border-bottom .2s ease-in;
 }

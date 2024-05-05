@@ -35,12 +35,38 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 1.5rem;
-    align-items: baseline;
+
     display: inline-flex;
+    column-gap: 2px;
+    align-items: flex-end;
+
+    & svg {
+        transform: translate(0px, -1.5px);
+        transition: transform .2s ease-in;
+    }
+
+    &:hover {
+        & svg {
+            transform: translate(3px, -3px);
+        }
+    }
 }
 
 .projects__card-text {
     line-height: 1.5;
     font-size: .875rem;
     margin-top: .5rem;
+}
+
+.projects__card-git-link {
+    color: rgb(203 213 225);
+    font-weight: 500;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    align-items: center;
+    display: inline-flex;
+    // margin-top: .5rem;
+    margin-top: .75rem;
+    position: relative;
+    column-gap: .25rem;
 }
