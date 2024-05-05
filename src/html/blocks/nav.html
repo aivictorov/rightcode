@@ -1,25 +1,25 @@
+{% set items = [
+    {
+        'text': 'Информация',
+        'link': '#about'
+    }, {
+        'text': 'Проекты',
+        'link': '#projects'
+    }, {
+        'text': 'Опыт',
+        'link': '#experience'
+    }
+] %}
+
 <nav class="header__nav">
     <ul>
-        <li>
-            <a class="nav-link" href="#about">
-                <span class="nav-link__strip"></span>
-                {# <span class="nav-link__text">About</span> #}
-                <span class="nav-link__text">Обо мне</span>
-            </a>
-        </li>
-        <li>
-            <a class="nav-link" href="#experience">
-                <span class="nav-link__strip"></span>
-                {# <span class="nav-link__text">Experience</span> #}
-                <span class="nav-link__text">Образование и опыт</span>
-            </a>
-        </li>
-        <li>
-            <a class="nav-link" href="#projects">
-                <span class="nav-link__strip"></span>
-                {# <span class="nav-link__text">Projects</span> #}
-                <span class="nav-link__text">Избранные проекты</span>
-            </a>
-        </li>
+        {% for item in items %}
+            <li>
+                <a class="nav-link" href="{{ item.link }}">
+                    <span class="nav-link__strip"></span>
+                    <span class="nav-link__text">{{ item.text }}</span>
+                </a>
+            </li>
+        {% endfor %}
     </ul>
 </nav>

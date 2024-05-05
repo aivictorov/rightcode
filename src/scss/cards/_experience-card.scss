@@ -15,7 +15,9 @@
 }
 
 .experience-card__header {
-    width: 30%;
+    width: calc((100% - 7rem) / 8 * 2 + 1rem);
+
+
 
     color: rgb(100 116 139);
     letter-spacing: .025em;
@@ -27,6 +29,8 @@
     margin-bottom: .5rem;
     z-index: 10;
 }
+
+
 
 .experience-card__title {
     color: rgb(226 232 240);
@@ -40,7 +44,10 @@
 }
 
 .experience-card__content {
-    width: 70%;
+
+
+    width: calc((100% - 7rem) / 8 * 6 + 5rem);
+
 
     line-height: 1.5;
     font-size: .875rem;
