@@ -9,23 +9,23 @@
             'title': 'Сайт туристического агентства',
             'preview': 'http://rightcode.pro/portfolio/abc-auto/index.html',
             'github': 'https://github.com/aivictorov/car-dealership-website',
-            'text': 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
-            'image': './img/project_2.webp',
-            'badges': ["React", "JavaScript", "PHP"]
+            'text': 'Фронтенд для сайта туристического агентства на фреймворке React JS. Формы поиска и бронирования отелей и перелетов. Страницы результатов поиска с фильтрами, сортировкой. Страницы регистрации и авторизации пользователей. Линчый кабинет пользователя. Сохранение в личном кабинете избранных и забронированных перелетов и отелей.',
+            'image': './img/projects/project_2.webp',
+            'badges': ["HTML", "SCSS", "JavaScript", "React JS"]
         }, {
             'title': 'Верстка сайта автосалона',
             'preview': 'http://rightcode.pro/portfolio/abc-auto/index.html',
             'github': 'https://github.com/aivictorov/car-dealership-website',
-            'text': 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
-            'image': './img/project_1.webp',
-            'badges': ["HTML", "SCSS", "Pixel Perfect", "Mobile (Desktop First)", "Gulp"]
+            'text': 'Pixel Perfect верстка главной странциы сайта автосалона по макету Figma с полной кастомизация элементов форм и реализацией всех необходимых интерактивных элементов на чистом JavaScript. Мобильная версия с адаптивный дизайном для любых мобильных устройств.',
+            'image': './img/projects/project_1.webp',
+            'badges': ["HTML", "SCSS", "JavaScript", "Gulp"]
         }, {
             'title': 'Сайт логистической компании',
             'preview': 'https://zhd.su',
             'github': 'https://github.com/aivictorov/car-dealership-website',
-            'text': 'Web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.',
-            'image': './img/project_3.webp',
-            'badges': ["PHP", "Laravel", "CMS"]
+            'text': 'Многостраничный корпоративный сайт действующей транспортно-логистической компании в сфере перевозки негабаритных грузов железнодорожным транспортом. Работает на собствненной CMS на фреймворке Laravel. Включающий в себя информационные страницы, масштабный раздел портфолио, раздел вопросы и ответы, а также формы обратной связи.',
+            'image': './img/projects/project_3.webp',
+            'badges': ["PHP", "MySQL", "Laravel"]
         }
     ] %}
 
@@ -37,6 +37,11 @@
                 </li>
             {% endfor %}
         </ul>
+
+        {% set details = {
+            'title': 'Показать больше проектов',
+            'link': '#!'
+        } %}
 
         {% include './../blocks/details.html' %}
     </div>

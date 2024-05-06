@@ -28,6 +28,21 @@
     line-height: 1.25rem;
 }
 
+.h4 {
+    color: rgb(226, 232, 240);
+    line-height: 1.25;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    // display: inline-flex;
+    column-gap: 2px;
+    // align-items: flex-end;
+}
+
 p+p {
     margin-top: 1rem;
+}
+
+strong {
+    color: rgb(226 232 240);
 }

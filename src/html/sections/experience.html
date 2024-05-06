@@ -4,20 +4,56 @@
         <h3 class="h3">Опыт</h3>
     </div>
 
+    {# https://www.youtube.com/playlist?list=PLXCVm4GFpx5CZf4X5ppNJTPsaGwSlBXLX #}
+
     {% set cards = [
         {
             'from': '2022',
             'to': '2024',
-            'title': 'Senior Frontend Engineer',
-            'text': 'Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.',
-            'badges': ["React", "JavaScript", "PHP"]
+            'title': 'Freelance',
+            'text': 'Онлайн курс по программированию и разработке на JavaScript и React JS. Научитесь создавать frontend для современных сайтов и веб-приложений. JavaScript один из самых востребованных и хорошо оплачиваемых языков веб-разработки. Курс включает в себя всю необходимую информацию по JavaScript и самому популярному фреймворку React JS.',
+            'badges': [""]
+        },{
+            'from': '2022',
+            'to': '2024',
+            'title': 'Курс "Frontend разработчик"',
+            'text': 'Онлайн курс по программированию и разработке на JavaScript и React JS. Научитесь создавать frontend для современных сайтов и веб-приложений. JavaScript один из самых востребованных и хорошо оплачиваемых языков веб-разработки. Курс включает в себя всю необходимую информацию по JavaScript и самому популярному фреймворку React JS.',
+            'badges': ["JavaScript", "React JS"]
         },
         {
             'from': '2024',
             'to': 'Present',
-            'title': 'Senior Frontend Engineer',
-            'text': 'Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.',
-            'badges': ["React", "JavaScript", "PHP"]
+            'title': 'Курс "Cоздание и верстка сайтов"',
+            'text': 'Курс по созданию и верстке сайтов. Освойте навык верстки сайтов с нуля до уверенного уровня за 3 месяца. Курс для тех кто начинает изучение веб-разработки. Верстка это отличная точка входа для новичков. Низкий уровень сложности, необходимые навыки для каждого веб-разработчика. Изучаемые технологии: HTML, CSS, SCSS, JS, jQuery, PHP, Figma, Photoshop, BEM naming, мобильная верстка.',
+            'badges': ["HTML", "CSS", "SCSS"]
+        },
+        {
+            'from': '2024',
+            'to': 'Present',
+            'title': 'Курс "Laravel"',
+            'text': 'Laravel Рассмотрим все возможности фреймворка на 2023 год.',
+            'badges': ["PHP", "Laravel"]
+        },
+        {
+            'from': '2024',
+            'to': 'Present',
+            'title': 'Курс "Разработка сайтов на PHP"',
+            'text': 'Научитесь создавать сайты на языке PHP и базе данных MySql. На курсе напишем собственную систему управления сайтом (CMS), с блогом, комментариями и регистрацией пользователей. Реализуем интернет магазин с каталогом товаров, корзиной, заказами и приемом онлайн платежей.',
+            'badges': ["PHP", "MySQL"]
+        },
+        {
+            'from': '2024',
+            'to': 'Present',
+            'title': 'ООО "Авангард Лоджистикс"',
+            'text': 'Научитесь создавать сайты на языке PHP и базе данных MySql. На курсе напишем собственную систему управления сайтом (CMS), с блогом, комментариями и регистрацией пользователей. Реализуем интернет магазин с каталогом товаров, корзиной, заказами и приемом онлайн платежей.',
+            'badges': ["PHP", "MySQL"]
+        },
+        {
+            'from': '2006',
+            'to': '2011',
+            'title': 'Санкт-Петербургский государственный университет путей сообщения (ПГУПС)',
+            'text': 'Имею высшее образование в сфере бизнеса и логистики. Обладаю аналитическим складом ума. Знаю сопротивление материалов. Дружу с машиностроительным черчением. Разрабатываю проекты размещения и крепления негабаритных и тяжеловесных грузов на железнодорожном транспорте.',
+            'badges': ["Бизнес", "Логистика", "Информационные технологии", "Проектирование", "Autodesk AutoCAD"]
         }
     ] %}
 
@@ -28,6 +64,11 @@
             </li>
         {% endfor %}
     </ul>
+
+    {% set details = {
+        'title': 'Скачать резюме',
+        'link': '#!'
+    } %}
 
     {% include './../blocks/details.html' %}
 </section>
