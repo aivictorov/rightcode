@@ -7,9 +7,12 @@
         transform: scale(1.2);
     }
 
-    &--arrow-next {
-        width: 8px;
-        height: 12px;
+    &--telegram,
+    &--email,
+    &--github,
+    &--linkedin {
+        width: 24px;
+        height: 24px;
     }
 
     &--arrow-right {
@@ -17,30 +20,18 @@
         height: 20px;
     }
 
-    &--git,
     &--arrow-up-right {
         width: 16px;
         height: 16px;
     }
 
-    &--download {
-        width: 20px;
-        height: 20px;
-    }
-
-
-    &--gitFull {
+    &--github-link {
         width: 38px;
         height: 16px;
     }
 
-    &--github,
-    &--linkedin,
-    &--codepen,
-    &--instagram,
-    &--twitter,
-    &--goodreads {
-        width: 24px;
-        height: 24px;
-    }
+    // &--download {
+    //     width: 20px;
+    //     height: 20px;
+    // }
 }

@@ -4,23 +4,23 @@
     </div>
 
     <div class="projects__card-content">
-        <a class="projects__card-header link" href="#!" target="_blank">
+        <a class="projects__card-header link" href="{{ card.preview }}" target="_blank">
             <h3>{{ card.title }}</h3>
             <svg class="icon icon--arrow-up-right">
                 <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
             </svg>
         </a>
+
         <div class="projects__card-text">
             <p>
                 {{ card.text }}
             </p>
         </div>
 
-        <a href="#!" class="projects__card-git-link" target="_blank">
-            <svg class="icon icon--gitFull">
-                <use xlink:href="./img/icons/sprite.svg#gitFull"></use>
+        <a href="{{ card.github }}" class="projects__card-git-link" target="_blank">
+            <svg class="icon icon--github-link">
+                <use xlink:href="./img/icons/sprite.svg#github-link"></use>
             </svg>
-            {# <span>Репозиторий на GitHub</span> #}
         </a>
 
         <ul class="badges-list">

@@ -4,25 +4,21 @@
 @import "./base/vars";
 @import "./base/mixins";
 @import "./base/base";
-// @import "./base/utils";
 
 // Elements
 @import "./elements/badge";
 @import "./elements/icons";
-@import "./elements/typography";
 @import "./elements/links";
-// @import "./elements/buttons";
-// @import "./elements/headers";
+@import "./elements/typography";
 
 // Blocks
+@import "./blocks/badges-list";
+@import "./blocks/contacts";
+@import "./blocks/details";
 @import "./blocks/footer";
 @import "./blocks/header";
 @import "./blocks/languages";
-@import "./blocks/details";
 @import "./blocks/nav";
-@import "./blocks/contacts";
-@import "./blocks/badges-list";
-// @import "./blocks/scrollup";
 
 // Cards
 @import "./cards/experience-card";
@@ -32,7 +28,3 @@
 @import "./sections/about";
 @import "./sections/experience";
 @import "./sections/projects";
-
-// Mixins
-// Modals
-// Forms
