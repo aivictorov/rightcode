@@ -1,29 +1,27 @@
-<div class="projects__card">
-    <div class="projects__card-image">
+<div class="project-card">
+    <div class="project-card__aside">
         <img src="{{ card.image }}"/>
     </div>
 
-    <div class="projects__card-content">
-        <a class="projects__card-header link" href="{{ card.preview }}" target="_blank">
-            <h3>{{ card.title }}</h3>
+    <div class="project-card__main">
+        <a class="link project-card__title " href="{{ card.preview }}" target="_blank">
+            <h4 class="h4">{{ card.title }}</h4>
             <svg class="icon icon--arrow-up-right">
                 <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
             </svg>
         </a>
 
-        <div class="projects__card-text">
-            <p>
-                {{ card.text }}
-            </p>
+        <div class="project-card__text">
+            <p>{{ card.text }}</p>
         </div>
 
-        <a href="{{ card.github }}" class="projects__card-git-link" target="_blank">
+        <a href="{{ card.github }}" class="project-card__git-link" target="_blank">
             <svg class="icon icon--github-link">
                 <use xlink:href="./img/icons/sprite.svg#github-link"></use>
             </svg>
         </a>
 
-        <ul class="badges-list">
+        <ul class="badges">
             {% for badge in card.badges %}
                 <li>
                     {% include './../elements/badge.html' %}

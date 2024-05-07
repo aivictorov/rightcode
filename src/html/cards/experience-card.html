@@ -1,35 +1,35 @@
-<div class="experience__card">
+<div class="experience-card">
     <div class="card-overlay"></div>
 
-    <header class="experience-card__header">
+    <header class="experience-card__aside">
         {{ card.from }} — {{ card.to }}
     </header>
 
-    <div class="experience-card__content">
-
-        <div class="experience-card__title link" href="https://www.klaviyo.com" target="_blank">
-            <h3>
-                <a href="#!">
-                    <span>{{ card.title }}</span>
-                    <div class="card-overlay2"></div>
-                </a>
-                <!-- Senior Frontend Engineer -->
-            </h3>
+    <div class="experience-card__main">
+        <a class="link experience-card__title" href="https://www.klaviyo.com" target="_blank">
+            <h4 class="h4">
+                <span>{{ card.title }}</span>
+                <div class="card-overlay2"></div>
+            </h4>
             <svg class="icon icon--arrow-up-right">
                 <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
             </svg>
-        </div>
+        </a>
 
         <p>
             {{ card.text }}
         </p>
 
-        <ul class="badges-list">
-            {% for badge in card.badges %}
-                <li>
-                    {% include './../elements/badge.html' %}
-                </li>
-            {% endfor %}
-        </ul>
+        {% if card.badges | length %}
+            <ul class="badges">
+                {% for badge in card.badges %}
+                    <li>
+                        {% include './../elements/badge.html' %}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
     </div>
+
 </div>

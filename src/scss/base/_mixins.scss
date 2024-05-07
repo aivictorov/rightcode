@@ -1,13 +1,5 @@
-@mixin bp($width, $direction: max) {
-	@if $direction ==min {
-		@media screen and (min-width: $width) {
-			@content;
-		}
-	}
-
-	@else {
-		@media screen and (max-width: $width) {
-			@content;
-		}
+@mixin bp($width) {
+	@media screen and (max-width: $width) {
+		@content;
 	}
 }

@@ -1,4 +1,4 @@
-.projects__card {
+.project-card {
     display: flex;
     column-gap: 1rem;
     align-items: start;
@@ -11,7 +11,7 @@
     }
 }
 
-.projects__card-image {
+.project-card__aside {
     width: calc((100% - 7rem) / 8 * 2 + 1rem);
     height: auto;
     border: 2px solid rgba(226, 232, 240, .1);
@@ -26,16 +26,13 @@
     }
 }
 
-.projects__card-content {
+.project-card__main {
     width: calc((100% - 7rem) / 8 * 6 + 5rem);
+    display: flex;
+    flex-direction: column;
 }
 
-.projects__card-header {
-    line-height: 1.25;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.5rem;
-
+.project-card__title {
     display: inline-flex;
     column-gap: 2px;
     align-items: flex-end;
@@ -52,13 +49,13 @@
     }
 }
 
-.projects__card-text {
+.project-card__text {
     line-height: 1.5;
     font-size: .875rem;
     margin-top: .5rem;
 }
 
-.projects__card-git-link {
+.project-card__git-link {
     color: rgb(203 213 225);
     font-weight: 500;
     font-size: .875rem;

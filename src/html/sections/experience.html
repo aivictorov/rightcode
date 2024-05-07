@@ -1,10 +1,8 @@
 <section class="experience" id="experience">
 
-    <div class="experience__title">
+    <div class="section-header">
         <h3 class="h3">Опыт</h3>
     </div>
-
-    {# https://www.youtube.com/playlist?list=PLXCVm4GFpx5CZf4X5ppNJTPsaGwSlBXLX #}
 
     {% set cards = [
         {
@@ -12,7 +10,7 @@
             'to': '2024',
             'title': 'Freelance',
             'text': 'Онлайн курс по программированию и разработке на JavaScript и React JS. Научитесь создавать frontend для современных сайтов и веб-приложений. JavaScript один из самых востребованных и хорошо оплачиваемых языков веб-разработки. Курс включает в себя всю необходимую информацию по JavaScript и самому популярному фреймворку React JS.',
-            'badges': [""]
+            'badges': []
         },{
             'from': '2022',
             'to': '2024',
@@ -57,7 +55,7 @@
         }
     ] %}
 
-    <ul class="experience-list">
+    <ul class="experience-cards">
         {% for card in cards %}
             <li>
                 {% include './../cards/experience-card.html' %}
