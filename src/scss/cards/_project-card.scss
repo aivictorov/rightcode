@@ -5,11 +5,15 @@
     position: relative;
 
     &:hover {
-        .card-overlay {
+        .card-highlight {
             display: block;
         }
     }
 }
+
+
+
+
 
 .project-card__aside {
     width: calc((100% - 7rem) / 8 * 2 + 1rem);

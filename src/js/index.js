@@ -9,6 +9,10 @@ window.addEventListener('DOMContentLoaded', () => {
 	nav();
 });
 
+document.addEventListener('click', (event) => {
+	console.log(event.target);
+})
+
 function scrollup() {
 	const scrollup = document.querySelector('.scrollup');
 	scrollup.style.opacity = 0;

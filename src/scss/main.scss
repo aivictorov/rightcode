@@ -3,15 +3,13 @@
 @import "./base/fonts";
 @import "./base/vars";
 @import "./base/mixins";
-@import "./base/base";
 
-// Elements
-@import "./elements/badge";
-@import "./elements/icons";
-// @import "./elements/links";
-@import "./elements/typography";
+@import "./base/base";
+@import "./base/icons";
+@import "./base/typography";
 
 // Blocks
+@import "./blocks/badge";
 @import "./blocks/badges";
 @import "./blocks/contacts";
 @import "./blocks/details";

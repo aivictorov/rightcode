@@ -8,35 +8,33 @@
     position: relative;
 
     &:hover {
-        .card-overlay {
+        .card-highlight {
             display: block;
         }
     }
 }
 
+
+
 .experience-card__aside {
-    width: calc((100% - 7rem) / 8 * 2 + 1rem);
-
-
-
-    color: rgb(100 116 139);
-    letter-spacing: .025em;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: .75rem;
-    line-height: 1rem;
     margin-top: .25rem;
     margin-bottom: .5rem;
-    z-index: 10;
+    width: calc((100% - 7rem) / 8 * 2 + 1rem);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+    line-height: 1rem;
+    color: rgb(100 116 139);
+    z-index: 1;
 }
 
 .experience-card__main {
-    width: calc((100% - 7rem) / 8 * 6 + 5rem);
-
-
-    line-height: 1.5;
-    font-size: .875rem;
     // margin-top: .5rem;
+    width: calc((100% - 7rem) / 8 * 6 + 5rem);
+    font-size: .875rem;
+    line-height: 1.5;
+    z-index: 1;
 }
 
 
