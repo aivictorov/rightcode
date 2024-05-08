@@ -14,7 +14,8 @@ body {
 
 .container {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	column-gap: 16px;
 	margin: 0 auto;
 	padding: 0 96px;
 	width: 100%;
@@ -22,13 +23,13 @@ body {
 
 	@include bp(1024px) {
 		flex-direction: column;
-		padding-left: 3rem;
-		padding-right: 3rem;
+		padding-left: 48px;
+		padding-right: 48px;
 	}
 
 	@include bp(768px) {
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 }
 
@@ -40,35 +41,46 @@ body {
 	@include bp(1024px) {
 		width: 100%;
 	}
+
+	@include bp(768px) {
+		padding-bottom: 64px;
+	}
 }
 
 .section-header {
 	display: none;
-	margin-bottom: 1rem;
-	padding-top: 1.25rem;
-	padding-bottom: 1.25rem;
+	margin-bottom: 16px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 
 	@include bp(1024px) {
 		display: block;
 		position: sticky;
 		top: 0;
-		margin-left: -3rem;
-		margin-right: -3rem;
-		padding-left: 3rem;
-		padding-right: 3rem;
+		margin-left: -48px;
+		margin-right: -48px;
+		padding-left: 48px;
+		padding-right: 48px;
 		backdrop-filter: blur(8px);
 		z-index: 20;
+	}
+
+	@include bp(768px) {
+		margin-left: -24px;
+		margin-right: -24px;
+		padding-left: 24px;
+		padding-right: 24px;
 	}
 }
 
 .card-highlight {
 	display: none;
 	position: absolute;
-	top: -1rem;
-	bottom: -1rem;
-	left: -1.5rem;
-	right: -1.5rem;
-	border-radius: .25rem;
+	top: -16px;
+	bottom: -16px;
+	left: -24px;
+	right: -24px;
+	border-radius: 4px;
 	background-color: rgba(30, 41, 59, .5);
 	box-shadow: 0 0 #0000, 0 0 #0000, inset 0 1px 0 0 rgba(148, 163, 184, .1);
 	z-index: 0;
@@ -78,10 +90,10 @@ body {
 .card-overlay {
 	display: block;
 	position: absolute;
-	top: -1rem;
-	bottom: -1rem;
-	left: -1.5rem;
-	right: -1.5rem;
-	border-radius: .25rem;
+	top: -16px;
+	bottom: -16px;
+	left: -24px;
+	right: -24px;
+	border-radius: 4px;
 	cursor: pointer;
 }

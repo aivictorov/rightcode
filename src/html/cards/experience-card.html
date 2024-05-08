@@ -2,23 +2,24 @@
     <div class="card-highlight"></div>
 
     <div class="experience-card__aside">
-        {{ card.from }} — {{ card.to }}
+        {{ card.from }}
+        {% if card.to %}
+            — {{ card.to }}
+        {% endif %}
     </div>
 
     <div class="experience-card__main">
-        <a class="link experience-card__title" href="https://www.klaviyo.com" target="_blank">
+        <a class="link experience-card__title" href="{{ card.link }}" target="_blank">
             <span class="card-overlay"></span>
-            <h4 class="h4">
-                <span>{{ card.title }}</span>
-            </h4>
+            <h4 class="h4">{{ card.title }}</h4>
             <svg class="icon icon--arrow-up-right">
                 <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
             </svg>
         </a>
 
-        <p>
-            {{ card.text }}
-        </p>
+        <div class="experience-card__text">
+            <p>{{ card.text }}</p>
+        </div>
 
         {% if card.badges | length %}
             <ul class="badges">

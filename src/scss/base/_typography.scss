@@ -19,23 +19,23 @@
 }
 
 .h3 {
-    font-size: .875rem;
+    font-size: 14px;
     font-weight: 700;
     letter-spacing: .1em;
-    line-height: 1.25rem;
+    line-height: 20px;
     text-transform: uppercase;
     color: rgb(226 232 240);
 }
 
 .h4 {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 500;
-    line-height: 1.5rem;
+    line-height: 24px;
     color: rgb(226, 232, 240);
 }
 
 p+p {
-    margin-top: 1rem;
+    margin-top: 16px;
 }
 
 strong {
@@ -45,11 +45,12 @@ strong {
 
 a.link {
     font-weight: 500;
-    color: rgb(226 232 240);
+    color: #e2e8f0;
     cursor: pointer;
+    transition: color .2s ease-in;
 
-    &--finnish {
-        cursor: url(./../img/languages/fi.svg), pointer;
+    &--fi {
+        cursor: url(./../../img/cursors/fi.svg), pointer;
     }
 
     &:hover {

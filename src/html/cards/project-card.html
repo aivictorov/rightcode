@@ -1,10 +1,13 @@
 <div class="project-card">
+    <div class="card-highlight"></div>
+
     <div class="project-card__aside">
-        <img src="{{ card.image }}"/>
+        <img src="{{ card.image }}" alt="{{ card.title }}"/>
     </div>
 
     <div class="project-card__main">
         <a class="link project-card__title " href="{{ card.preview }}" target="_blank">
+            <span class="card-overlay"></span>
             <h4 class="h4">{{ card.title }}</h4>
             <svg class="icon icon--arrow-up-right">
                 <use xlink:href="./img/icons/sprite.svg#arrow-up-right"></use>
@@ -15,10 +18,11 @@
             <p>{{ card.text }}</p>
         </div>
 
-        <a href="{{ card.github }}" class="project-card__git-link" target="_blank">
+        <a class="link project-card__github" href="{{ card.github }}" target="_blank">
             <svg class="icon icon--github-link">
                 <use xlink:href="./img/icons/sprite.svg#github-link"></use>
             </svg>
+            <span>Репозиторий на GitHub</span>
         </a>
 
         <ul class="badges">

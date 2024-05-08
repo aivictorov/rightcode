@@ -1,28 +1,16 @@
-window.addEventListener('DOMContentLoaded', () => {
-	// modalWindows();
-	// scrollup();
-	// oversizeForm();
-	// callbackForm();
-	// inputFile();
-	// mobileNav();
-	cursor();
-	nav();
+window.addEventListener('load', () => {
+	document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+	}, 500);
 });
 
-document.addEventListener('click', (event) => {
-	console.log(event.target);
-})
-
-function scrollup() {
-	const scrollup = document.querySelector('.scrollup');
-	scrollup.style.opacity = 0;
-	document.addEventListener('scroll', () => {
-		scrollup.style.opacity = window.scrollY > 300 ? 1 : 0;
-	});
-	scrollup.addEventListener('click', () => {
-		window.scrollTo(0, 0);
-	});
-};
+window.addEventListener('DOMContentLoaded', () => {
+	cursor();
+	nav();
+	projects();
+});
 
 function cursor() {
 	document.addEventListener('mousemove', (event) => {
@@ -31,27 +19,12 @@ function cursor() {
 }
 
 function nav() {
-	document.addEventListener('scroll', (event) => {
+	document.addEventListener('scroll', () => {
+		const about = document.getElementById('about');
+		const projects = document.getElementById('projects');
+		const experience = document.getElementById('experience');
 
 		const scrollPosition = window.scrollY;
-		// console.log('scrollPosition', scrollPosition)
-
-		var about = document.getElementById('about');
-		// var yPosition = about.offsetTop;
-		// console.log('about', about.offsetTop, about.clientHeight)
-
-		var projects = document.getElementById('projects');
-		// var yPosition = projects.offsetTop;
-		// console.log('projects', projects.offsetTop, projects.clientHeight)
-
-		var experience = document.getElementById('experience');
-		// var yPosition = experience.offsetTop;
-		// console.log('experience', experience.offsetTop, experience.clientHeight)
-
-		// for (let i = 0; i < navLinks.length; i++) {
-		// 	navLinks[i].addEventListener('click', scrollToTarget);
-		// }
-		// console.log(scrollPosition, projects.offsetTop,)
 
 		if (scrollPosition > about.offsetTop - 250 && scrollPosition < about.offsetTop + about.clientHeight - 250) {
 			document.querySelectorAll('.nav-link')[0].classList.add('nav-link--active');
@@ -72,3 +45,34 @@ function nav() {
 		}
 	});
 };
+
+function projects() {
+	const section = document.getElementById('projects');
+	const projects = section.querySelectorAll('ul.projects__list>li');
+	const details = section.querySelector('.projects__details');
+	const button = details.querySelector('.details-button');
+	let count = 2;
+
+	if (projects.length <= count) {
+		details.style.display = "none";
+	}
+
+	renderProjects();
+
+	button.addEventListener('click', () => {
+		if (projects.length > count) count++;
+		console.log(count);
+		renderProjects();
+		projects[count - 1].classList.add('project-card--animated');
+	});
+
+	function renderProjects() {
+		projects.forEach((project, index) => {
+			project.style.display = "list-item";
+
+			if (index >= count) {
+				project.style.display = "none";
+			}
+		});
+	};
+}

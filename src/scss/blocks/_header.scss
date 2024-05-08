@@ -1,50 +1,41 @@
 .header {
-    height: 100vh;
-    // box-sizing: border-box;
     position: sticky;
     top: 0;
-
-    padding-top: 96px;
-    padding-bottom: 96px;
-
-    width: 50%;
-
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
-    flex-shrink: 0;
-
-    // background-color: green;
-
+    // flex-shrink: 0;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    width: 50%;
+    height: 100vh;
 
     @include bp(1024px) {
         position: static;
+        padding-bottom: 0;
         width: 100%;
         height: unset;
-        padding-bottom: 0;
     }
 
     @include bp(768px) {
-        padding-top: 3rem;
-        // padding-bottom: 3rem;
-        // padding-left: 1.5rem;
-        // padding-right: 1.5rem;
+        padding-top: 48px;
     }
 }
 
-// .header__title{}
-
 .header__subtitle {
-    margin-top: .75rem;
-
+    margin-top: 12px;
 }
 
 .header__info {
+    margin-top: 16px;
+    max-width: 320px;
     line-height: 1.5;
-    max-width: 20rem;
-    margin-top: 1rem;
+}
+
+.header__badges {
+    margin-top: 24px;
+    width: 60%;
 }
 
 .header__nav {
-    margin-top: 4rem;
+    margin-top: 64px;
 }

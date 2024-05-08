@@ -5,30 +5,31 @@
         <h2 class="h2 header__subtitle">FullStack Веб-Разработчик</h2>
         <div class="header__info">Создание и провижение сайтов, интернет-магазинов и веб-приложений.</div>
 
-        {% set items = [
+        {% set badges = [
             "HTML",
             "CSS",
             "SCSS",
-            "BEM",
+            "Gulp",
             "JavaScript",
-            "React",
-            "MySQL",
+            "React JS",
             "PHP",
             "Laravel",
-            "Gulp",
+            "MySQL",
             "WebPack",
             "Git"
         ] %}
 
-        <div class="header-badges" style="width: 60%; margin-top: 1.5rem;">
-            <ul class="badges">
-                {% for item in items %}
-                    <li>
-                        <div class="badge badge--header">{{ item }}</div>
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
+        {% if badges | length %}
+            <div class="header__badges">
+                <ul class="badges">
+                    {% for badge in badges %}
+                        <li>
+                            <div class="badge badge--header">{{ badge }}</div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
 
         {% include './../blocks/nav.html' %}
     </div>

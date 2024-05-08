@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-{% set title = "Andrey Viktorov | Full Stack Web-Developer" %}
+{% set title = "Андрей Викторов | FullStack Веб-Разработчик" %}
 {% set url = "https://rightcode.ru/" %}
-{% set description = "" %}
-{% set keywords = "" %}
+{% set description = "Создание и провижение сайтов, интернет-магазинов и веб-приложений." %}
+{% set keywords = "Разрабатка, программирование, продвижение, сайты, веб-приложений, одностраничный, лэндинг, многостраничный, корпоративный сайт, интернет-магазин, верстка, Pixel Perfect, препроцессор, шаблонизатор, Gulp, оптимизация, Google PageSpeed, JavaScript, Frontend, SPA приложения, фреймворк, React, React JS, PHP, Backend, CMS, Laravel." %}
 
 <html lang="ru-RU">
-
     <head>
         <!-- Encoding -->
         <meta charset="UTF-8">
@@ -19,18 +18,21 @@
         <meta name="keywords" content="{{ keywords }}"/>
 
         <!-- Styles -->
-        {# <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"> #}
         <link rel="stylesheet" href="./css/main.css"/>
 
-        <!-- Yandex.Metrika counter -->
-        <!-- OpenGraph -->
         <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./../img/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./../img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./../img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="./../img/favicons/site.webmanifest">
+
+        <!-- OpenGraph -->
+        <!-- Yandex.Metrika counter -->
     </head>
 
     <body>
-        {% include './blocks/languages.html' %}
+        {% include './blocks/loader.html' %}
+        {# {% include './blocks/languages.html' %} #}
 
         <div class="container">
             {% include './blocks/header.html' %}
@@ -46,7 +48,7 @@
 
     <!-- Scripts -->
     <script type='module' src="./js/index.js"></script>
-    {# <script src="./js/index.bundle.js"></script> #}
+    <!-- <script src="./js/index.bundle.js"></script> -->
 </body>
 
 </html>

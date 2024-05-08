@@ -1,15 +1,12 @@
 .about {
-    margin-bottom: 9rem;
-    scroll-margin-top: 6rem;
-
-    flex-shrink: 0;
-
+    margin-bottom: 144px;
+    scroll-margin-top: 96px;
 
     @include bp(1024px) {
-        margin-bottom: 6rem;
+        margin-bottom: 96px;
     }
 
     @include bp(768px) {
-        margin-bottom: 4rem;
+        margin-bottom: 64px;
     }
 }

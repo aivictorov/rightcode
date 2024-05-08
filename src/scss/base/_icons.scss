@@ -1,11 +1,6 @@
 .icon {
     display: block;
     flex-shrink: 0;
-    transition: transform .2s ease-in;
-
-    &:hover {
-        transform: scale(1.2);
-    }
 
     &--telegram,
     &--email,
@@ -13,6 +8,11 @@
     &--linkedin {
         width: 24px;
         height: 24px;
+        transition: transform .2s ease-in;
+
+        &:hover {
+            transform: scale(1.2);
+        }
     }
 
     &--arrow-right {
@@ -25,13 +25,39 @@
         height: 16px;
     }
 
+    &--arrow-right,
+    &--arrow-up-right {
+        transition: transform .2s ease-in;
+    }
+
     &--github-link {
-        width: 38px;
+        width: 16px;
         height: 16px;
     }
 
-    // &--download {
-    //     width: 20px;
-    //     height: 20px;
-    // }
+    &--ru {
+        width: 18px;
+        height: 12px;
+    }
+
+    &--us {
+        width: 18px;
+        height: 12px;
+    }
+
+    &--fi {
+        width: 18px;
+        height: 11px;
+    }
+
+    &--ru,
+    &--us,
+    &--fi {
+        transition: box-shadow .2s ease-in-out;
+
+        &:hover {
+            transform: unset;
+            box-shadow: rgba(94, 234, 212, 0.5) 0px 0px 2px 2px;
+        }
+    }
 }

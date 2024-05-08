@@ -7,22 +7,29 @@
     {% set cards = [
         {
             'title': 'Сайт туристического агентства',
-            'preview': 'http://rightcode.pro/portfolio/abc-auto/index.html',
+            'preview': 'http://rightcode.pro/portfolio/travel/index.html',
             'github': 'https://github.com/aivictorov/car-dealership-website',
             'text': 'Фронтенд для сайта туристического агентства на фреймворке React JS. Формы поиска и бронирования отелей и перелетов. Страницы результатов поиска с фильтрами, сортировкой. Страницы регистрации и авторизации пользователей. Линчый кабинет пользователя. Сохранение в личном кабинете избранных и забронированных перелетов и отелей.',
             'image': './img/projects/project_2.webp',
             'badges': ["HTML", "SCSS", "JavaScript", "React JS"]
         }, {
             'title': 'Верстка сайта автосалона',
-            'preview': 'http://rightcode.pro/portfolio/abc-auto/index.html',
-            'github': 'https://github.com/aivictorov/car-dealership-website',
+            'preview': 'http://rightcode.pro/portfolio/auto/index.html',
+            'github': '#!',
             'text': 'Pixel Perfect верстка главной странциы сайта автосалона по макету Figma с полной кастомизация элементов форм и реализацией всех необходимых интерактивных элементов на чистом JavaScript. Мобильная версия с адаптивный дизайном для любых мобильных устройств.',
             'image': './img/projects/project_1.webp',
             'badges': ["HTML", "SCSS", "JavaScript", "Gulp"]
         }, {
             'title': 'Сайт логистической компании',
             'preview': 'https://zhd.su',
-            'github': 'https://github.com/aivictorov/car-dealership-website',
+            'github': '#!',
+            'text': 'Многостраничный корпоративный сайт действующей транспортно-логистической компании в сфере перевозки негабаритных грузов железнодорожным транспортом. Работает на собствненной CMS на фреймворке Laravel. Включающий в себя информационные страницы, масштабный раздел портфолио, раздел вопросы и ответы, а также формы обратной связи.',
+            'image': './img/projects/project_3.webp',
+            'badges': ["PHP", "MySQL", "Laravel"]
+        }, {
+            'title': 'Сайт логистической компании',
+            'preview': 'https://zhd.su',
+            'github': '#!',
             'text': 'Многостраничный корпоративный сайт действующей транспортно-логистической компании в сфере перевозки негабаритных грузов железнодорожным транспортом. Работает на собствненной CMS на фреймворке Laravel. Включающий в себя информационные страницы, масштабный раздел портфолио, раздел вопросы и ответы, а также формы обратной связи.',
             'image': './img/projects/project_3.webp',
             'badges': ["PHP", "MySQL", "Laravel"]
@@ -30,7 +37,7 @@
     ] %}
 
     <div>
-        <ul class="projects-cards">
+        <ul class="projects__list">
             {% for card in cards %}
                 <li>
                     {% include './../cards/project-card.html' %}
@@ -39,10 +46,11 @@
         </ul>
 
         {% set details = {
-            'title': 'Показать больше проектов',
-            'link': '#!'
+            'title': 'Показать больше проектов'
         } %}
 
-        {% include './../blocks/details.html' %}
+        <div class="projects__details">
+            {% include './../blocks/details-button.html' %}
+        </div>
     </div>
 </section>

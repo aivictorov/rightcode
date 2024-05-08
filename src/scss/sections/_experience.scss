@@ -1,8 +1,16 @@
 .experience {
-    margin-bottom: 9rem;
-    scroll-margin-top: 6rem;
+    margin-bottom: 144px;
+    scroll-margin-top: 96px;
+
+    @include bp(1024px) {
+        margin-bottom: 96px;
+    }
+
+    @include bp(768px) {
+        margin-bottom: 64px;
+    }
 }
 
 .experience-cards>li {
-    margin-bottom: 3rem;
+    margin-bottom: 48px;
 }

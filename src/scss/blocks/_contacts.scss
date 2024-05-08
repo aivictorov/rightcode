@@ -1,13 +1,11 @@
-.header__links {
-    margin-top: auto;
+.contacts {
     display: flex;
-    column-gap: 1.25rem;
     align-items: center;
-    // margin-top: 2rem;
-    margin-left: .25rem;
-
+    column-gap: 20px;
+    margin-top: auto;
+    margin-left: 4px;
 
     @include bp(1024px) {
-        margin-top: 2rem;
+        margin-top: 32px;
     }
 }
