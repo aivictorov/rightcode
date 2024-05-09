@@ -1,10 +1,6 @@
-<div class="projects__details">
-    <a class="projects__details-link" href="{{ details.link  }}">
-        <span class="projects__details-link-text">
-            {{ details.title }}
-        </span>
-        <svg class="icon icon--arrow-right">
-            <use xlink:href="./img/icons/sprite.svg#arrow-right"></use>
-        </svg>
-    </a>
-</div>
+<a class="details-link" href="{{ details.link }}">
+    <span>{{ details.title }}</span>
+    <svg class="icon icon--arrow-right">
+        <use xlink:href="./img/icons/sprite.svg#arrow-right"></use>
+    </svg>
+</a>

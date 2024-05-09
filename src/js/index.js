@@ -51,7 +51,7 @@ function projects() {
 	const projects = section.querySelectorAll('ul.projects__list>li');
 	const details = section.querySelector('.projects__details');
 	const button = details.querySelector('.details-button');
-	let count = 2;
+	let count = 3;
 
 	if (projects.length <= count) {
 		details.style.display = "none";
