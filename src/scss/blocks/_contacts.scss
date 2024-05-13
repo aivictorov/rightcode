@@ -8,4 +8,8 @@
     @include bp(1024px) {
         margin-top: 32px;
     }
+
+    & a {
+        font-size: 0;
+    }
 }
