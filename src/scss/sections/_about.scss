@@ -9,4 +9,8 @@
     @include bp(768px) {
         margin-bottom: 64px;
     }
+
+    @include bph(744px) {
+        margin-bottom: 96px;
+    }
 }

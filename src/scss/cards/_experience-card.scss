@@ -44,18 +44,24 @@
 }
 
 .experience-card__title {
-    display: inline-flex;
-    align-items: flex-end;
-    column-gap: 2px;
+    & h4 {
+        & span {
+            display: inline;
+        }
 
-    & svg {
-        transform: translate(0px, -1.5px);
-        transition: transform .2s ease-in;
+        & svg {
+            vertical-align: bottom;
+            margin-left: 2px;
+            display: inline;
+
+            transform: translateY(-2px);
+            transition: transform .2s ease-in;
+        }
     }
 
     &:hover {
         & svg {
-            transform: translate(3px, -3px);
+            transform: translate(4px, -4px);
         }
     }
 }

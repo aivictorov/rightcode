@@ -48,31 +48,69 @@ function nav() {
 
 function projects() {
 	const section = document.getElementById('projects');
-	const projects = section.querySelectorAll('ul.projects__list>li');
+	let projects = section.querySelectorAll('ul.projects__list>li');
 	const details = section.querySelector('.projects__details');
-	const button = details.querySelector('.details-button');
-	let count = 3;
-
-	if (projects.length <= count) {
-		details.style.display = "none";
-	}
+	const moreButton = details.querySelector('.details-button--more');
+	const lessButton = details.querySelector('.details-button--less');
+	const visible = 3;
+	let count = visible;
 
 	renderProjects();
+	renderButtons();
 
-	button.addEventListener('click', () => {
-		if (projects.length > count) count++;
-		console.log(count);
+	moreButton.addEventListener('click', () => {
+		count++;
+
+		projects[count - 1].classList.add('animation-appear');
+		setTimeout(() => { projects[count - 1].classList.remove('animation-appear'); }, 2000);
+
 		renderProjects();
-		projects[count - 1].classList.add('project-card--animated');
+		setTimeout(renderButtons, 500);
 	});
+
+	lessButton.addEventListener('click', () => {
+		count = visible;
+
+		projects.forEach((project, index) => {
+			if (index > visible - 1) {
+				project.classList.add('animation-disappear');
+			}
+		});
+
+		setTimeout(() => {
+			projects.forEach((project, index) => {
+				if (index > visible - 1) {
+					project.classList.remove('animation-disappear');
+				}
+			})
+		}, 2000);
+
+		setTimeout(renderProjects, 2000 - 50);
+		setTimeout(renderButtons, 500);
+	});
+
+	function renderButtons() {
+
+		if (projects.length <= count) {
+			moreButton.style.display = "none";
+			lessButton.style.removeProperty('display')
+		}
+
+		if (projects.length > count) {
+			lessButton.style.display = "none";
+			moreButton.style.removeProperty('display')
+		}
+	}
 
 	function renderProjects() {
 		projects.forEach((project, index) => {
-			project.style.display = "list-item";
+			if (index < count) {
+				project.style.removeProperty('display')
+			}
 
 			if (index >= count) {
 				project.style.display = "none";
 			}
 		});
-	};
+	}
 }

@@ -1,5 +1,11 @@
-<button class="details-button" type="button">
-    <span>{{ details.title }}</span>
+<button class="details-button details-button--more" type="button">
+    <span>{{ details.more }}</span>
+    <svg class="icon icon--arrow-right">
+        <use xlink:href="./img/icons/sprite.svg#arrow-right"></use>
+    </svg>
+</button>
+<button class="details-button  details-button--less" type="button">
+    <span>{{ details.less }}</span>
     <svg class="icon icon--arrow-right">
         <use xlink:href="./img/icons/sprite.svg#arrow-right"></use>
     </svg>

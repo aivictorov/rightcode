@@ -3,7 +3,6 @@
     top: 0;
     display: flex;
     flex-direction: column;
-    // flex-shrink: 0;
     padding-top: 96px;
     padding-bottom: 96px;
     width: 50%;
@@ -18,6 +17,11 @@
 
     @include bp(768px) {
         padding-top: 48px;
+    }
+
+    @include bph(744px) {
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
 }
 
@@ -38,4 +42,12 @@
 
 .header__nav {
     margin-top: 64px;
+
+    @include bp(1024px) {
+        display: none;
+    }
+
+    @include bph(744px) {
+        margin-top: 48px;
+    }
 }
