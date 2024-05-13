@@ -109,7 +109,7 @@ gulp.task('php', function () {
 });
 
 gulp.task('root', function () {
-    return gulp.src('./src/root/*')
+    return gulp.src(['./src/root/.*', './src/root/*'])
         .pipe(gulp.dest('./dist/'));
 });
 
@@ -127,6 +127,7 @@ gulp.task('watch', function () {
     gulp.watch('./src/php/**/*', gulp.parallel('php'));
     gulp.watch('./src/libs/**/*', gulp.parallel('libs'));
     gulp.watch('./src/files/**/*', gulp.parallel('files'));
+    gulp.watch(['./src/root/.*', './src/root/*'], gulp.parallel('root'));
 });
 
 // Default task
