@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 {% set title = "Андрей Викторов | Full Stack Веб-Разработчик" %}
 {% set url = "https://rightcode.ru/" %}
-{% set description = "Создание и провижение сайтов, интернет-магазинов и веб-приложений." %}
-{% set keywords = "Разрабатка, программирование, продвижение, сайты, веб-приложений, одностраничный, лэндинг, многостраничный, корпоративный сайт, интернет-магазин, верстка, Pixel Perfect, препроцессор, шаблонизатор, Gulp, оптимизация, Google PageSpeed, JavaScript, Frontend, SPA приложения, фреймворк, React, React JS, PHP, Backend, CMS, Laravel." %}
+{% set description = "Создание и провижение сайтов, интернет-магазинов и веб-приложений для различных сфер бизнеса, от одностраничных лэндингов до больших корпоративных сайтов и интернет-магазинов. Выполняю все этапы разработки." %}
+{% set keywords = "Разработка, программирование, продвижение, сайты, веб-приложения, одностраничный сайт, лэндинг, многостраничный сайт, корпоративный сайт, интернет-магазин, адаптивная верстка, кроссбраузерная верстка, верстка Pixel Perfect, препроцессор, шаблонизатор, оптимизация, Frontend, фронтенд, Backend, бэкенд, CMS, HTML, CSS, SCSS, Gulp, Google PageSpeed, JavaScript, React JS, PHP, Laravel, MySQL, WebPack, Git" %}
 
 <html lang="ru-RU">
     <head>
@@ -10,15 +10,15 @@
         <meta charset="UTF-8">
 
         <!-- Mobile support -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Title and SEO -->
         <title>{{ title }}</title>
-        <meta name="description" content="{{ description }}"/>
-        <meta name="keywords" content="{{ keywords }}"/>
+        <meta name="description" content="{{ description }}">
+        <meta name="keywords" content="{{ keywords }}">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="./css/main.css"/>
+        <link rel="stylesheet" href="./css/main.css">
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="./../img/favicons/apple-touch-icon.png">
@@ -27,7 +27,49 @@
         <link rel="manifest" href="./../img/favicons/site.webmanifest">
 
         <!-- OpenGraph -->
+        <meta property="og:url" content="{{ url }}">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="{{ title }}">
+        <meta property="og:description" content="{{ description }}">
+        {# <meta property="og:image" content="./img/opengraph.jpg"> #}
+
         <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function () {
+                    try {
+                        w.yaCounter97268095 = new Ya.Metrika({id: 97268095, clickmap: false, trackLinks: false, accurateTrackBounce: true});
+                    } catch (e) {}
+                });
+
+                var n = d.getElementsByTagName("script")[0],
+                    x = "https://mc.yandex.ru/metrika/watch.js",
+                    s = d.createElement("script"),
+                    f = function () {
+                        n
+                            .parentNode
+                            .insertBefore(s, n);
+                    };
+                for (var i = 0; i < document.scripts.length; i++) {
+                    if (document.scripts[i].src === x) {
+                        return;
+                    }
+                }
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = x;
+
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else {
+                    f();
+                }
+            })(document, window, "yandex_metrika_callbacks");
+        </script>
+        <noscript>
+            <div><img src="https://mc.yandex.ru/watch/97268095" style="position:absolute; left:-9999px;" alt=""/></div>
+        </noscript>
+        <!-- /Yandex.Metrika counter -->
     </head>
 
     <body>
@@ -44,11 +86,10 @@
                 {% include './blocks/footer.html' %}
             </main>
         </div>
-    </div>
 
-    <!-- Scripts -->
-    <script type='module' src="./js/index.js"></script>
-    <!-- <script src="./js/index.bundle.js"></script> -->
-</body>
+        <!-- Scripts -->
+        <script src="./js/index.bundle.js"></script>
+        {# <script type='module' src="./js/index.js"></script> #}
+    </body>
 
 </html>

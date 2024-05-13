@@ -80,18 +80,18 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('./dist/fonts/'));
 });
 
-// gulp.task('js', function () {
-//     return gulp.src('./src/js/*.js')
-//         .pipe(plumber(plumberSettings('JS')))
-//         .pipe(babel())
-//         .pipe(webpack(require('./webpack.config')))
-//         .pipe(gulp.dest('./dist/js/'));
-// });
-
 gulp.task('js', function () {
     return gulp.src('./src/js/*.js')
+        .pipe(plumber(plumberSettings('JS')))
+        .pipe(babel())
+        .pipe(webpack(require('./webpack.config')))
         .pipe(gulp.dest('./dist/js/'));
 });
+
+// gulp.task('js', function () {
+//     return gulp.src('./src/js/*.js')
+//         .pipe(gulp.dest('./dist/js/'));
+// });
 
 gulp.task('libs', function () {
     return gulp.src('./src/libs/**/*')
@@ -108,8 +108,8 @@ gulp.task('php', function () {
         .pipe(gulp.dest('./dist/php/'));
 });
 
-gulp.task('htaccess', function () {
-    return gulp.src('./src/.htaccess')
+gulp.task('root', function () {
+    return gulp.src('./src/root/*')
         .pipe(gulp.dest('./dist/'));
 });
 
@@ -133,6 +133,6 @@ gulp.task('watch', function () {
 
 gulp.task('default', gulp.series(
     'clean',
-    gulp.parallel('html', 'sass', 'images', 'fonts', 'js', 'php', 'libs', 'files', 'htaccess'),
+    gulp.parallel('html', 'sass', 'images', 'fonts', 'js', 'php', 'libs', 'files', 'root'),
     gulp.parallel('server', 'watch')
 ));

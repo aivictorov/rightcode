@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /portfolio/travel/index.html
+Disallow: /portfolio/auto/index.html
+Disallow: /portfolio/auto/index.html
+Sitemap: https://rightcode.pro/sitemap.xml
+Host: rightcode.pro
