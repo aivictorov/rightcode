@@ -1,8 +1,9 @@
 .nav-link {
+    display: inline-flex;
+    align-items: center;
     padding-top: 12px;
     padding-bottom: 12px;
-    align-items: center;
-    display: flex;
+    min-width: 200px;
 
     &:hover,
     &--active {
@@ -19,21 +20,19 @@
 
 .nav-link__strip {
     display: block;
-    height: 1px;
-    background-color: rgb(71 85 105);
     margin-right: 16px;
     width: 32px;
-
+    height: 1px;
+    background-color: rgb(71 85 105);
     transition: width .4s ease-in, background-color .3s ease-in;
 }
 
 .nav-link__text {
-    color: rgb(100 116 139);
-    letter-spacing: .1em;
-    text-transform: uppercase;
     font-weight: 700;
     font-size: 12px;
     line-height: 16px;
-
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: rgb(100 116 139);
     transition: color .4s ease-in;
 }
