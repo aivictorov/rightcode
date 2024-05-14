@@ -1,16 +1,21 @@
 window.addEventListener('load', () => {
+	loader();
+	cursor();
+	projects();
+	metrika();
+});
+
+window.addEventListener('scroll', () => {
+	nav();
+}, { once: true });
+
+function loader() {
 	document.body.classList.add('loaded_hiding');
 	window.setTimeout(function () {
 		document.body.classList.add('loaded');
 		document.body.classList.remove('loaded_hiding');
 	}, 500);
-});
-
-window.addEventListener('DOMContentLoaded', () => {
-	cursor();
-	nav();
-	projects();
-});
+}
 
 function cursor() {
 	document.addEventListener('mousemove', (event) => {
@@ -113,4 +118,37 @@ function projects() {
 			}
 		});
 	}
+}
+
+function metrika() {
+	(function (d, w, c) {
+		(w[c] = w[c] || []).push(function () {
+			try {
+				w.yaCounter97268095 = new Ya.Metrika({ id: 97268095, clickmap: false, trackLinks: false, accurateTrackBounce: true });
+			} catch (e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+			x = "https://mc.yandex.ru/metrika/watch.js",
+			s = d.createElement("script"),
+			f = function () {
+				n
+					.parentNode
+					.insertBefore(s, n);
+			};
+		for (var i = 0; i < document.scripts.length; i++) {
+			if (document.scripts[i].src === x) {
+				return;
+			}
+		}
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = x;
+
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else {
+			f();
+		}
+	})(document, window, "yandex_metrika_callbacks");
 }
