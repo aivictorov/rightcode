@@ -1,12 +1,15 @@
 window.addEventListener('load', () => {
 	loader();
-	cursor();
-	projects();
 	metrika();
 });
 
+document.addEventListener('mousemove', () => {
+	cursor();
+}, { once: true });
+
 window.addEventListener('scroll', () => {
 	nav();
+	projects();
 }, { once: true });
 
 function loader() {
