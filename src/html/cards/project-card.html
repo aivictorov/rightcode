@@ -6,7 +6,7 @@
     </div>
 
     <div class="project-card__main">
-        <a class="link project-card__title " href="{{ card.preview }}" target="_blank">
+        <a class="link project-card__title " href="{{ card.preview }}" target="_blank"{% if card.nofollow %} rel="nofollow"{% endif %}>
             <span class="card-overlay"></span>
             <h4 class="h4">{{ card.title }}</h4>
             <svg class="icon icon--arrow-up-right">

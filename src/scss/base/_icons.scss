@@ -34,30 +34,4 @@
         width: 16px;
         height: 16px;
     }
-
-    &--ru {
-        width: 18px;
-        height: 12px;
-    }
-
-    &--us {
-        width: 18px;
-        height: 12px;
-    }
-
-    &--fi {
-        width: 18px;
-        height: 11px;
-    }
-
-    &--ru,
-    &--us,
-    &--fi {
-        transition: box-shadow .2s ease-in-out;
-
-        &:hover {
-            transform: unset;
-            box-shadow: rgba(94, 234, 212, 0.5) 0px 0px 2px 2px;
-        }
-    }
 }
