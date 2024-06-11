@@ -165,7 +165,7 @@ gulp.task('watch-prod', function () {
     gulp.watch(['./src/root/.*', './src/root/*'], gulp.parallel('root'));
 });
 
-// Default (Developement)
+// Developement (Default)
 
 gulp.task('default', gulp.series(
     'clean',

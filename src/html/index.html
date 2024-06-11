@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 {% set title = "Андрей Викторов | Full Stack Веб-Разработчик" %}
-{% set url = "https://rightcode.ru/" %}
 {% set description = "Создание и провижение сайтов, интернет-магазинов и веб-приложений для различных сфер бизнеса, от одностраничных лэндингов до больших корпоративных сайтов и интернет-магазинов. Выполняю все этапы разработки." %}
 {% set keywords = "Разработка, программирование, продвижение, сайты, веб-приложения, одностраничный сайт, лэндинг, многостраничный сайт, корпоративный сайт, интернет-магазин, адаптивная верстка, кроссбраузерная верстка, верстка Pixel Perfect, препроцессор, шаблонизатор, оптимизация, Frontend, фронтенд, Backend, бэкенд, CMS, HTML, CSS, SCSS, Gulp, Google PageSpeed, JavaScript, React JS, PHP, Laravel, MySQL, WebPack, Git" %}
+{% set url = "https://rightcode.pro" %}
 
 <html lang="ru-RU">
     <head>
@@ -16,7 +16,7 @@
         <title>{{ title }}</title>
         <meta name="description" content="{{ description }}">
         <meta name="keywords" content="{{ keywords }}">
-        <link rel="canonical" href="https://rightcode.pro"/>
+        <link rel="canonical" href="{{ url }}"/>
 
         <!-- Styles -->
         <link rel="stylesheet" href="./css/main.css">
@@ -32,12 +32,11 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="{{ title }}">
         <meta property="og:description" content="{{ description }}">
-        {# <meta property="og:image" content="./img/opengraph.jpg"> #}
+        <meta property="og:image" content="./img/opengraph.jpg">
     </head>
 
     <body>
         {% include './blocks/loader.html' %}
-        {# {% include './blocks/languages.html' %} #}
 
         <div class="container">
             {% include './blocks/header.html' %}
@@ -51,7 +50,6 @@
         </div>
 
         <!-- Scripts -->
-        {# <script src="./js/index.bundle.js"></script> #}
         <script type='module' src="./js/index.js"></script>
     </body>
 
